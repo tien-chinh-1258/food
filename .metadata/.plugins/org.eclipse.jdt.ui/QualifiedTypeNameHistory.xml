@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="vn.herta.models.UserModel"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="vn.herta.dao.IUserDao"/>
+    <fullyQualifiedTypeName name="vn.herta.dao.impl.UserDaoImpl"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="vn.herta.services.impl.UserService"/>
+    <fullyQualifiedTypeName name="vn.herta.services.IUserService"/>
+</qualifiedTypeNameHistroy>

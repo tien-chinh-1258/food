@@ -1,0 +1,5 @@
+package vn.herta.dao;
+
+public interface IUserDao {
+
+}

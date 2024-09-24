@@ -1,0 +1,85 @@
+package vn.herta.dao.impl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+import vn.herta.configs.DBConnectMySQL;
+import vn.herta.dao.IUserDao;
+import vn.herta.models.UserModel;
+
+
+public class UserDaoImpl extends DBConnectMySQL implements IUserDao {
+
+	public Connection conn = null;
+	public PreparedStatement ps = null;
+	public ResultSet rs = null;
+
+	@Override
+	public List<UserModel> findAll() {
+		
+		String sql ="select * from users";
+		
+		List<UserModel> list = new ArrayList<>(); //tao 1 list de truyen du lieu
+		
+		try {
+			conn=super.getDatabaseConnection();
+			ps=conn.prepareStatement(sql);
+			rs=ps.executeQuery();
+			
+			while (rs.next()/*next tung dong toi cuoi bang*/) {
+				list.add(
+						new UserModel(
+						rs.getInt("id"),
+						rs.getString("username"),
+						rs.getString("password"),
+						rs.getString("email"),
+						rs.getString("fullname")
+						)
+					); //add vao
+			
+			}
+			return list;
+		}catch (Exception e) {
+			//TODO: handle exception
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+
+	@Override
+	public UserModel findById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void insert(UserModel user) {
+		String sql = "INSERT INTO [User](id,username, email, fullname, password,images) VALUES (?,?,?,?,?)";
+				try {
+				conn = super.getDatabaseConnection();
+				ps = conn.prepareStatement(sql);
+				ps.setInt(1, user.getId());
+				ps.setString(2, user.getUsername());
+		        ps.setString(3, user.getEmail());
+				ps.setString(4, user.getFullname());
+				ps.setString(5, user.getPassword());
+				ps.executeUpdate();
+				} catch (Exception e) {e.printStackTrace();}
+				}
+
+
+		
+	}
+	public static void main(String[] args) {
+		UserDaoImpl uesrDao = new UserDaoImpl();
+		List<UserModel> list = uesrDao.findAll();
+		for (UserModel user : list) {
+			System.out.println(user);
+		}
+	}
+}
+
