@@ -1,3 +1,15 @@
 INDEX VERSION 1.134
+C:\Users\NINO\Documents\LapTrinhWeb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3325523475.index
+\LTW\src\main\java
+C:\Users\NINO\Documents\LapTrinhWeb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3842995180.index
+\LTW\src\main\java
 C:\Users\NINO\Documents\workspace-spring-tool-suite-4-4.24.0.RELEASE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\365836523.index
+\LTW\src\main\java
+C:\Users\NINO\Documents\LapTrinhWeb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2212467327.index
+\LTW\src\main\java
+C:\Users\NINO\Documents\LapTrinhWeb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\365836523.index
+\LTW\src\main\java
+C:\Users\NINO\Documents\LapTrinhWeb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\527697277.index
+\LTW\src\main\java
+C:\Users\NINO\Documents\LapTrinhWeb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\332563944.index
 \LTW\src\main\java

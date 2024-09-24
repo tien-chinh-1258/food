@@ -4,15 +4,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
     <form action="/LTW/login" method="post">
     
-    <c:if test="${alert !=null}">
-<h3 class="alert alertdanger">${alert}</h3>
+    <c:if test="${alert != null}">
+    <h3 class="alert alert-danger">${alert}</h3>
 </c:if>
+
 
   <div class="container">
     <label for="uname"><b>Username</b></label>

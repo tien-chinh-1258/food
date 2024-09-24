@@ -1,5 +1,0 @@
-package vn.herta.configs;
-
-public class DBConnectMySQL {
-
-}
