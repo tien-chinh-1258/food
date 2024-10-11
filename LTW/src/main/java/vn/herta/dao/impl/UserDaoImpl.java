@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import vn.herta.configs.DBConnectMySQL;
-import vn.herta.configs.DBConnectSQL;
+
 import vn.herta.dao.IUserDao;
 import vn.herta.models.UserModel;
 
@@ -21,10 +21,11 @@ public class UserDaoImpl extends DBConnectMySQL implements IUserDao {
 
 	@Override
 	public List<UserModel> findAll() {
-		String sql = "SELECT id, username, password, fullname, email, images, phone, roleid, createDate FROM users";
+		                     
+		String sql = "SELECT id, username, password, images, fullname, email,phone,roleid,createDate FROM users";
 		List<UserModel> list = new ArrayList<UserModel>();
 		try {
-		conn = new DBConnectSQL().getConnection();
+		conn = super.getDatabaseConnection(); // ket noi database
 		ps = conn.prepareStatement(sql);
 		rs = ps.executeQuery();
 		while (rs.next()) {
@@ -32,12 +33,9 @@ public class UserDaoImpl extends DBConnectMySQL implements IUserDao {
 			rs.getInt("id"),
             rs.getString("username"),
             rs.getString("password"),
+            rs.getString("images"),  
             rs.getString("fullname"),
-            rs.getString("email"),
-            rs.getString("images"),
-            
-            
-            
+            rs.getString("email"),            
             rs.getString("phone"),
             rs.getInt("roleid"),
             rs.getDate("createDate")));
@@ -63,11 +61,12 @@ public class UserDaoImpl extends DBConnectMySQL implements IUserDao {
 	public UserModel findById(int id) {
 		String sql = "SELECT * FROM users WHERE id = ? ";
 		try {
-		conn = new DBConnectSQL().getConnection();
+		conn = super.getDatabaseConnection();
 		ps = conn.prepareStatement(sql);
 		ps.setInt(1, id);
 		rs = ps.executeQuery();
 		while (rs.next()) {
+			
 		UserModel user = new UserModel();
 		user.setId(rs.getInt("id"));
 		user.setUsername(rs.getString("username"));
@@ -83,15 +82,7 @@ public class UserDaoImpl extends DBConnectMySQL implements IUserDao {
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
-		finally {
-		    try {
-		        if (rs != null) rs.close();
-		        if (ps != null) ps.close();
-		        if (conn != null) conn.close();
-		    } catch (Exception e) {
-		        e.printStackTrace();
-		    }
-		}
+		
 		return null;
 		}
 
@@ -100,7 +91,7 @@ public class UserDaoImpl extends DBConnectMySQL implements IUserDao {
 	public void insert(UserModel users) {
 	    String sql = "INSERT INTO users(id, username, password,images, fullname, email,phone,roleid,createDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 	    try {
-	    	conn = new DBConnectSQL().getConnection();
+	    	conn = super.getDatabaseConnection();
 	        ps = conn.prepareStatement(sql);
 	        ps.setInt(1, users.getId());
 	        ps.setString(2, users.getUsername());
@@ -134,11 +125,11 @@ public class UserDaoImpl extends DBConnectMySQL implements IUserDao {
 	public UserModel findByUserName(String username) {
 	    String sql = "SELECT * FROM users WHERE username = ?";
 	    try {
-	        conn = new DBConnectSQL().getConnection();
+	        conn = super.getDatabaseConnection();
 	        ps = conn.prepareStatement(sql);
 	        ps.setString(1, username);
 	        rs = ps.executeQuery();
-	        if (rs.next()) {
+	        while (rs.next()) {
 	            // Lấy thông tin người dùng từ cơ sở dữ liệu
 	            UserModel user = new UserModel();
 	            user.setId(rs.getInt("id"));

@@ -10,9 +10,9 @@ public class UserModel implements Serializable{
 	private int id;
 	private String username;
 	private String password;
-	private String fullname;
-	private String email;
 	private String images;
+	private String fullname;
+	private String email;	
 	private String phone;
 	private int roleid;
 	private Date createDate;
@@ -21,15 +21,15 @@ public class UserModel implements Serializable{
 		super();
 	}
 
-	public UserModel(int id, String username, String password, String fullname, String email, String images,
+	public UserModel(int id, String username, String password, String images ,String fullname, String email,
 			String phone, int roleid, Date createDate) {
 		super();
 		this.id = id;
 		this.username = username;
 		this.password = password;
+		this.images = images;
 		this.fullname = fullname;
 		this.email = email;
-		this.images = images;
 		this.phone = phone;
 		this.roleid = roleid;
 		this.createDate = createDate;
@@ -58,6 +58,14 @@ public class UserModel implements Serializable{
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
+	public String getImages() {
+		return images;
+	}
+
+	public void setImages(String images) {
+		this.images = images;
+	}
 
 	public String getFullname() {
 		return fullname;
@@ -74,14 +82,7 @@ public class UserModel implements Serializable{
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-	public String getImages() {
-		return images;
-	}
-
-	public void setImages(String images) {
-		this.images = images;
-	}
+	
 
 	public String getPhone() {
 		return phone;
@@ -109,8 +110,8 @@ public class UserModel implements Serializable{
 
 	@Override
 	public String toString() {
-		return "UserModel [id=" + id + ", username=" + username + ", password=" + password + ", fullname=" + fullname
-				+ ", email=" + email + ", images=" + images + ", phone=" + phone + ", roleid=" + roleid + "]";
+		return "UserModel [id=" + id + ", username=" + username + ", password=" + password + ",images=" + images + ", fullname=" + fullname
+				+ ", email=" + email + ",  phone=" + phone + ", roleid=" + roleid + "]";
 	}
 	
 	

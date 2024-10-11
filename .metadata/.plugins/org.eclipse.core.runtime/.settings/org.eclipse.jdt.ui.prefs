@@ -1,8 +1,10 @@
-content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="vn.herta.dao.IUserDao"><rhs name\="vn.herta.dao.impl.UserDaoImpl"/></lhs></history>
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="vn.herta.dao.IUserDao"><rhs name\="vn.herta.dao.impl.UserDaoImpl"/></lhs><lhs name\="java.util.SequencedCollection"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.Collection"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.List"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="vn.herta.models.CategoryModel"><rhs name\="vn.herta.models.CategoryModel"/></lhs><lhs name\="vn.herta.dao.ICategoryDao"><rhs name\="vn.herta.dao.impl.CategoryDaoImpl"/></lhs><lhs name\="vn.herta.services.ICategoryService"><rhs name\="vn.herta.services.impl.CategoryServiceImpl"/></lhs></history>
 content_assist_number_of_computers=14
 content_assist_proposals_background=255,255,255
 content_assist_proposals_foreground=0,0,0
 eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
 org.eclipse.jdt.ui.formatterprofiles.version=23
 spelling_locale_initialized=true
 typefilter_migrated_2=true

@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.io.Serializable"/>
     <fullyQualifiedTypeName name="vn.herta.models.UserModel"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="vn.herta.dao.IUserDao"/>
     <fullyQualifiedTypeName name="vn.herta.dao.impl.UserDaoImpl"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
     <fullyQualifiedTypeName name="vn.herta.services.impl.UserService"/>
     <fullyQualifiedTypeName name="vn.herta.services.IUserService"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="vn.herta.configs.DBConnectSQL"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="vn.herta.dao.ICategoryDao"/>
+    <fullyQualifiedTypeName name="vn.herta.dao.impl.CategoryDaoImpl"/>
+    <fullyQualifiedTypeName name="vn.herta.models.CategoryModel"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="vn.herta.services.ICategoryService"/>
+    <fullyQualifiedTypeName name="vn.herta.services.impl.CategoryServiceImpl"/>
 </qualifiedTypeNameHistroy>
