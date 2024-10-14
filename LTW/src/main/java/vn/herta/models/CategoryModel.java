@@ -10,6 +10,7 @@ public class CategoryModel implements Serializable {
 	private String images;
 	private int status;
 	
+	
 	//Tạo constructor, getters/setters
 	public CategoryModel() {
 		super();

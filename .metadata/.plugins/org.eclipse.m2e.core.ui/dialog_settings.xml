@@ -25,13 +25,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="org.LTW2"/>
 		</list>
 		<list key="groupId">
-			<item value="vn.herta"/>
 		</list>
 		<list key="artifactId">
-			<item value="LTW2"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -52,6 +49,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="jpact4"/>
 			<item value="LTW2"/>
 			<item value="LTW"/>
 		</list>

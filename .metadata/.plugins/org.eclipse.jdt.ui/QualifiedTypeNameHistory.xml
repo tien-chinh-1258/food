@@ -21,4 +21,9 @@
     <fullyQualifiedTypeName name="vn.herta.services.impl.CategoryServiceImpl"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
     <fullyQualifiedTypeName name="vn.herta.models.CategoryModel"/>
+    <fullyQualifiedTypeName name="vn.herta.utils.Constant"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.Part"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.annotation.MultipartConfig"/>
 </qualifiedTypeNameHistroy>

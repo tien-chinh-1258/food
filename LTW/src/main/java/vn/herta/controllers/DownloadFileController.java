@@ -22,7 +22,7 @@ public class DownloadFileController extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 	throws ServletException, IOException {
 	String fileName = req.getParameter("fname");
-	File file = new File(Constant.DIR + "/" + fileName);
+	File file = new File(Constant.UPLOAD_DIRECTORY + "/" + fileName);
 	resp.setContentType("image/jpeg");
 	if (file.exists()) {
 	IOUtils.copy(new FileInputStream(file), resp.getOutputStream());
