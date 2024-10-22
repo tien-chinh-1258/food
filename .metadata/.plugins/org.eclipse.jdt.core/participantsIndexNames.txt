@@ -7,6 +7,10 @@ C:\Users\NINO\Documents\LapTrinhWeb\.metadata\.plugins\org.eclipse.jst.jsp.core\
 \LTW\src\main\java
 C:\Users\NINO\Documents\LapTrinhWeb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1059636956.index
 \LTW\src\main\java
+C:\Users\NINO\Documents\LapTrinhWeb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2609989001.index
+\jpact4\src\main\java
+C:\Users\NINO\Documents\LapTrinhWeb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3452564118.index
+\jpact4\src\main\java
 C:\Users\NINO\Documents\LapTrinhWeb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1011398399.index
 \LTW\src\main\java
 C:\Users\NINO\Documents\LapTrinhWeb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2212467327.index
@@ -15,6 +19,8 @@ C:\Users\NINO\Documents\LapTrinhWeb\.metadata\.plugins\org.eclipse.jst.jsp.core\
 \LTW\src\main\java
 C:\Users\NINO\Documents\LapTrinhWeb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3842995180.index
 \LTW\src\main\java
+C:\Users\NINO\Documents\LapTrinhWeb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4015767992.index
+\jpact4\src\main\java
 C:\Users\NINO\Documents\LapTrinhWeb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3325523475.index
 \LTW\src\main\java
 C:\Users\NINO\Documents\LapTrinhWeb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3415076213.index

@@ -12,6 +12,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.NamedQuery;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotEmpty;
 
 
 @Entity
@@ -26,6 +27,7 @@ public class Category implements Serializable {
  private int categoryId;
 
  @Column(name="Categoryname", columnDefinition ="NVARCHAR(200) NOT NULL")
+ @NotEmpty(message="không đươc bỏ trống")
  private String categoryname;
 
  @Column(name="Images", columnDefinition ="NVARCHAR(MAX) NULL")
@@ -94,4 +96,10 @@ public Video removeVideo(Video video) {
     
     return video;
  }
+
+@Override
+public String toString() {
+	return "Category [categoryId=" + categoryId + ", categoryname=" + categoryname + ", images=" + images + ", status="
+			+ status + ", videos=" + videos + "]";
+}
 }

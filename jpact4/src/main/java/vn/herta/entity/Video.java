@@ -92,5 +92,11 @@ public class Video implements Serializable {
  public void setCategory(Category category) {
  this.category = category;
  }
+
+@Override
+public String toString() {
+	return "Video [videoId=" + videoId + ", active=" + active + ", description=" + description + ", poster=" + poster
+			+ ", title=" + title + ", views=" + views + ", category=" + category + "]";
+}
 }
 

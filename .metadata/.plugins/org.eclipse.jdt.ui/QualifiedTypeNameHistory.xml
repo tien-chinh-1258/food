@@ -17,7 +17,6 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="vn.herta.dao.ICategoryDao"/>
     <fullyQualifiedTypeName name="vn.herta.dao.impl.CategoryDaoImpl"/>
-    <fullyQualifiedTypeName name="vn.herta.services.ICategoryService"/>
     <fullyQualifiedTypeName name="vn.herta.services.impl.CategoryServiceImpl"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
     <fullyQualifiedTypeName name="vn.herta.models.CategoryModel"/>
@@ -26,4 +25,6 @@
     <fullyQualifiedTypeName name="jakarta.servlet.http.Part"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="jakarta.servlet.annotation.MultipartConfig"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.TypedQuery"/>
+    <fullyQualifiedTypeName name="vn.herta.services.ICategoryService"/>
 </qualifiedTypeNameHistroy>

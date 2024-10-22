@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.List;
 
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.annotation.WebServlet;
@@ -14,7 +15,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.Part;
 import vn.herta.models.CategoryModel;
 import vn.herta.services.ICategoryService;
-import vn.herta.services.impl.CategoryServiceImpl;
+import vn.herta.services.impl.CategoryService;
 import static vn.herta.utils.Constant.*;
 
 @MultipartConfig(fileSizeThreshold = 1024 * 1024, 
@@ -26,7 +27,7 @@ maxFileSize = 1024 * 1024 * 5, maxRequestSize = 1024 * 1024 * 5 * 5)
 public class CategoryController extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
-    public ICategoryService cateService = new CategoryServiceImpl();
+    public ICategoryService cateService = new CategoryService();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -47,7 +48,11 @@ public class CategoryController extends HttpServlet {
             req.getRequestDispatcher("/views/admin/category-add.jsp").forward(req, resp);
         } else if (url.contains("/admin/category/delete")) {
             int id = Integer.parseInt(req.getParameter("id"));
+            try {
             cateService.delete(id);
+            }catch (Exception e) {
+            	e.printStackTrace();
+            }
             resp.sendRedirect(req.getContextPath() + "/admin/categories");
         }
     }
@@ -61,15 +66,41 @@ public class CategoryController extends HttpServlet {
             int categoryid = Integer.parseInt(req.getParameter("categoryid"));
             String categoryname=req.getParameter("categoryname");
             int status = Integer.parseInt(req.getParameter("status"));
-            String images = "https://cdn.tgdd.vn/Products/Images/42/307171/samsung-galaxy-s24-violet-thumbnew-600x600.jpg";
+            
             CategoryModel category = new CategoryModel();
             category.setCategoryid(categoryid);
             category.setCategoryname(categoryname);
             category.setStatus(status);
-            category.setImages(images);
-            cateService.insert(category);
-            resp.sendRedirect(req.getContextPath() + "/admin/categories");
-            
+            //luu hinh cu
+            CategoryModel cateold = cateService.findById(categoryid);
+            String fileold = cateold.getImages();
+            //xu ly image
+            String fname="";
+            String uploadPath = UPLOAD_DIRECTORY;
+            File uploadDir = new File(uploadPath);
+            if (!uploadDir.exists()) {
+                uploadDir.mkdir();
+            }
+            try {
+                Part part = req.getPart("images");
+                if (part.getSize() > 0) {
+                    String filename = Paths.get(part.getSubmittedFileName()).getFileName().toString();
+                   //doi ten file
+                    int index = filename.lastIndexOf(".");
+                    String ext = filename.substring(index + 1);
+                    fname = System.currentTimeMillis() + "." + ext;
+                   //up load file
+                    part.write(uploadPath + "/" + fname);
+                   //ghi ten file vao data 
+                    category.setImages(fname);
+                }else {
+                	category.setImages(fileold);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            cateService.update(category);
+            resp.sendRedirect(req.getContextPath() + "/admin/categories");        
         }else if (url.contains("/admin/category/insert")) {
         	CategoryModel category = new CategoryModel();
         	String categoryname = req.getParameter("categoryname");
@@ -82,7 +113,6 @@ public class CategoryController extends HttpServlet {
             if (!uploadDir.exists()) {
                 uploadDir.mkdir();
             }
-
             try {
                 Part part = req.getPart("images");
                 if (part.getSize() > 0) {
@@ -107,7 +137,4 @@ public class CategoryController extends HttpServlet {
     }
 }
   
-
-
-       
       
