@@ -7,7 +7,7 @@
 
 
 <hr>
-<table border="1">
+<table border="1" width="100%">
 	<tr>
 
 		<th>STT</th>

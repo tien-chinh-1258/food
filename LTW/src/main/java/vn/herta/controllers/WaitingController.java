@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import vn.herta.models.UserModel;
-@SuppressWarnings("serial")
+
 
 
 @WebServlet(urlPatterns = { "/waiting" })
@@ -27,6 +27,8 @@ public class WaitingController extends HttpServlet {
 				resp.sendRedirect(req.getContextPath() + "/admin/home");
 			} else if (u.getRoleid() == 3) {
 				resp.sendRedirect(req.getContextPath() + "/manager/home");
+			} else if (u.getRoleid() == 4) {
+				resp.sendRedirect(req.getContextPath() + "/seller/home");
 			} else {
 				resp.sendRedirect(req.getContextPath() + "/home");
 			}
