@@ -7,7 +7,7 @@ package vn.herta.repository;
 	import org.springframework.security.core.userdetails.UserDetailsService;
 	import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-	import vn.herta.springboot3.entity.UserInfo;
+	import vn.herta.entity.UserInfo;
 
 	public class UserInfoRepository implements UserDetailsService {
 
