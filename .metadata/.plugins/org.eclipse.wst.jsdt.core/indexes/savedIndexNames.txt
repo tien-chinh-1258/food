@@ -1,10 +1,5 @@
 INDEX VERSION 1.4+C:\Users\NINO\Documents\LapTrinhWeb\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-4073146277.index
-4239596975.index
-86770311.index
-758850232.index
-733779047.index
-173950036.index
+2328483997.index
 2319990038.index
-1940465078.index
-1492585701.index
+4073146277.index
+758850232.index
