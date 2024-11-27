@@ -9,7 +9,7 @@
 	</section>
 	<section name="PropertyDialog.dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="125"/>
-		<item key="DIALOG_Y_ORIGIN" value="62"/>
+		<item key="DIALOG_Y_ORIGIN" value="47"/>
 		<item key="DIALOG_WIDTH" value="1207"/>
 		<item key="DIALOG_HEIGHT" value="880"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
@@ -23,8 +23,8 @@
 			<item value="org.eclipse.wst.XMLCategory"/>
 		</list>
 		<section name="NewWizard.dialogBounds">
-			<item key="DIALOG_X_ORIGIN" value="403"/>
-			<item key="DIALOG_Y_ORIGIN" value="65"/>
+			<item key="DIALOG_X_ORIGIN" value="192"/>
+			<item key="DIALOG_Y_ORIGIN" value="189"/>
 			<item key="DIALOG_WIDTH" value="938"/>
 			<item key="DIALOG_HEIGHT" value="505"/>
 			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
